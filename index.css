@@ -95,11 +95,13 @@ a:hover {
 .con2 {
     background: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-3-Desktop-US.png');
     background-size: cover;
+    height:100%;
 }
 
 .con3 {
     background: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-US-v2.png');
     background-size: cover;
+    height:100%;
 }
 
 .con2 button,
