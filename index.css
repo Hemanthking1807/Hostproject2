@@ -1,11 +1,11 @@
-
+/* Global Styling */
 body {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    height: 100%; 
+    height: 100%; /* Ensure the body takes up full screen height */
 }
 
-
+/* Top notification banner */
 .top {
     position: fixed;
     text-align: center;
@@ -18,18 +18,18 @@ body {
     padding: 5px 0;
 }
 
-
+/* Main container for hero image */
 .container {
     padding-top: 40px;
     background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-US.png');
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center center; 
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center center; /* Centers the background image */
     margin: 0;
-    min-height: 100vh; 
+    min-height: 100vh; /* Ensure full height of viewport */
 }
 
-
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
