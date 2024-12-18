@@ -1,0 +1,357 @@
+body {
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.top {
+    position: fixed;
+    text-align: center;
+    color: #303434;
+    background-color: rgb(226, 220, 213);
+    width: 100%;
+    font-size: 11px;
+    margin: 0px;
+    z-index: 5;
+    padding: 5px 0;
+}
+
+.container {
+    padding-top: 40px;
+    background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-US.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    height: 500px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav div a {
+    margin: 10px;
+}
+
+#i {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.logo {
+    background: none;
+    border: none;
+}
+
+.logo img {
+    background: none;
+    border: none;
+    height: 80px;
+    width: 80px;
+    padding-left: 20px;
+}
+
+nav i {
+    color: antiquewhite;
+    padding-top: -10px;
+}
+
+#an {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#an div a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+a:hover {
+    color: red;
+    border-bottom: 2px solid white;
+}
+
+.con2,
+.con3 {
+    margin: 0px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: antiquewhite;
+    padding: 0;
+}
+
+.con2 {
+    background: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-3-Desktop-US.png');
+    background-size: cover;
+}
+
+.con3 {
+    background: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-US-v2.png');
+    background-size: cover;
+}
+
+.con2 button,
+.con3 button {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
+    text-align: center;
+}
+
+#b1 {
+    position: absolute;
+    left: 400px;
+    top: 90vh;
+    width: 200px;
+    height: 30px;
+    color: #303434;
+    border-radius: 10px;
+}
+
+.end {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 9px;
+    color: #303434;
+    margin-bottom: 40px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+    color: #303434;
+}
+
+.end div {
+    display: grid;
+    width: 400px;
+}
+
+.end div p {
+    justify-content: center;
+}
+
+.end div ul li a {
+    text-decoration: none;
+    color: #303434;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    background-color: rgb(215, 212, 209);
+}
+
+#dc1 {
+    visibility: hidden;
+    width: 100%;
+    height: max-content;
+    background-color: white;
+    pointer-events: none;
+    transition: visibility 0s 0.3s, opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 2;
+}
+
+#dc1 div {
+    z-index: 2;
+}
+
+#h1 {
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+    left: 400px;
+    color: white;
+}
+
+.footer.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#dc1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    border: none;
+}
+
+/* Mobile and Tablet Responsive Styles */
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: 400px;
+    }
+
+    .top {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .logo img {
+        height: 60px;
+        width: 60px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav div {
+        gap: 10px;
+        text-align: center;
+       
+    }
+    #an{
+        font-size: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .con2,
+    .con3 {
+        height: 400px;
+    }
+
+    .con2 button,
+    .con3 button {
+        width: 150px;
+        height: 35px;
+    }
+
+    #b1 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 80vh;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .footer {
+        font-size: 10px;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .end div {
+        width: 100%;
+    }
+
+    .end div ul {
+        display: block;
+        text-align: center;
+    }
+
+    #h1 {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+    .container {
+        height: 350px;
+    }
+    #an{
+        font-size: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .top {
+        font-size: 9px;
+        padding: 5px;
+    }
+
+    .logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #i {
+        padding-right: 0;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .con2,
+    .con3 {
+        height: 350px;
+    }
+
+    .con2 button,
+    .con3 button {
+        width: 130px;
+        height: 30px;
+    }
+
+    #b1 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 60%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .footer {
+        font-size: 8px;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .end div {
+        width: 100%;
+    }
+
+    .end div ul {
+        display: block;
+        text-align: center;
+    }
+
+    #h1 {
+        position: absolute;
+        top: 50%;
+    }
+}
