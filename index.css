@@ -1,8 +1,11 @@
+/* Global Styling */
 body {
-    margin: 0px;
+    margin: 0;
     font-family: 'Times New Roman', Times, serif;
+    height: 100%; /* Ensure the body takes up full screen height */
 }
 
+/* Top notification banner */
 .top {
     position: fixed;
     text-align: center;
@@ -10,23 +13,25 @@ body {
     background-color: rgb(226, 220, 213);
     width: 100%;
     font-size: 11px;
-    margin: 0px;
+    margin: 0;
     z-index: 5;
     padding: 5px 0;
 }
 
+/* Main container for hero image */
 .container {
     padding-top: 40px;
     background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-US.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0px;
-    height: 500px;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center center; /* Centers the background image */
+    margin: 0;
+    min-height: 100vh; /* Ensure full height of viewport */
 }
 
+/* Navbar */
 nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 10px 20px;
 }
@@ -53,9 +58,7 @@ nav div a {
 }
 
 .logo img {
-    background: none;
-    border: none;
-    height: 80px;
+    height: 70px;
     width: 80px;
     padding-left: 20px;
 }
@@ -65,13 +68,13 @@ nav i {
     padding-top: -10px;
 }
 
+/* Menu items */
 #an {
     display: flex;
-    flex-direction: row;
-    position: relative;
+    gap: 15px;
 }
 
-#an div a {
+#an a {
     text-decoration: none;
     color: antiquewhite;
 }
@@ -81,37 +84,36 @@ a:hover {
     border-bottom: 2px solid white;
 }
 
-.con2,
-.con3 {
-    margin: 0px;
-    height: 500px;
+/* Sections for models */
+.con2, .con3 {
+    margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     color: antiquewhite;
     padding: 0;
+    min-height: 100vh; /* Ensure full screen height */
 }
 
 .con2 {
     background: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-3-Desktop-US.png');
     background-size: cover;
-    height:100%;
 }
 
 .con3 {
     background: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-US-v2.png');
     background-size: cover;
-    height:100%;
 }
 
-.con2 button,
-.con3 button {
+button {
     width: 200px;
-    height: 30px;
+    height: 40px;
     border-radius: 10px;
     border: none;
     background-color: blue;
     color: antiquewhite;
+    font-size: 14px;
+    margin: 10px 0;
 }
 
 h1 {
@@ -119,20 +121,22 @@ h1 {
     text-align: center;
 }
 
-#b1 {
-    position: absolute;
-    left: 400px;
-    top: 90vh;
-    width: 200px;
-    height: 30px;
-    color: #303434;
-    border-radius: 10px;
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    background-color: rgb(215, 212, 209);
+    padding: 10px 0;
 }
 
+/* End section with legal and privacy links */
 .end {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     font-size: 9px;
     color: #303434;
     margin-bottom: 40px;
@@ -145,74 +149,48 @@ ul {
     list-style: none;
     color: #303434;
 }
-
+.end{
+    padding-bottom: 20px;
+}
 .end div {
     display: grid;
     width: 400px;
+}
+
+.end div ul {
+    display: flex;
+    text-align: center;
 }
 
 .end div p {
     justify-content: center;
 }
 
-.end div ul li a {
-    text-decoration: none;
-    color: #303434;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0px;
-    text-align: center;
-    width: 100%;
-    font-size: 12px;
-    background-color: rgb(215, 212, 209);
-}
-
+/* Hidden section */
 #dc1 {
     visibility: hidden;
     width: 100%;
-    height: max-content;
     background-color: white;
     pointer-events: none;
     transition: visibility 0s 0.3s, opacity 0.3s ease-in-out;
     opacity: 0;
-    z-index: 2;
-}
-
-#dc1 div {
-    z-index: 2;
-}
-
-#h1 {
-    position: absolute;
-    top: 100px;
-    z-index: 1;
-    left: 400px;
-    color: white;
-}
-
-.footer.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-#dc1 {
+    z-index: 5;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     justify-content: center;
 }
 
-button {
-    border: none;
+
+#dc1 div {
+    z-index: 5;
 }
 
-/* Mobile and Tablet Responsive Styles */
+/* Media Queries */
 
+/* Tablet & Mobile Responsive */
 @media screen and (max-width: 768px) {
     .container {
-        height: 400px;
+        min-height: 100vh; /* Full viewport height */
     }
 
     .top {
@@ -234,17 +212,16 @@ button {
     nav div {
         gap: 10px;
         text-align: center;
-       
-    }
-    #an{
-        font-size: 10px;
-        display: flex;
-        flex-direction: row;
     }
 
-    .con2,
-    .con3 {
-        height: 400px;
+    #an {
+        font-size: 10px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .con2, .con3 {
+        min-height: 100vh; /* Full screen height */
     }
 
     .con2 button,
@@ -283,18 +260,18 @@ button {
         top: 50%;
         transform: translateX(-50%);
     }
+    #dc1{
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 /* Mobile View */
 @media screen and (max-width: 480px) {
     .container {
-        height: 350px;
+        min-height: 100vh; /* Full screen height */
     }
-    #an{
-        font-size: 10px;
-        display: flex;
-        flex-direction: row;
-    }
+
     .top {
         font-size: 9px;
         padding: 5px;
@@ -306,7 +283,7 @@ button {
     }
 
     nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
@@ -316,9 +293,8 @@ button {
         gap: 10px;
     }
 
-    .con2,
-    .con3 {
-        height: 350px;
+    .con2, .con3 {
+        min-height: 100vh; /* Full screen height */
     }
 
     .con2 button,
@@ -355,5 +331,9 @@ button {
     #h1 {
         position: absolute;
         top: 50%;
+    }
+    #dc1{
+        display: flex;
+        flex-direction: row;
     }
 }
